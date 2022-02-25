@@ -1,0 +1,36 @@
+  <h1><i class="fab fa-node-js fa-3x"></i></h1>
+  <p>Test Page</p>
+  <table id="table" border="1">  
+    <thead>  
+        <tr>  
+            <th>ID</th>  
+            <th>priceChange</th>  
+            <th>priceChangePercent</th>  
+            <th>weightedAvgPrice</th>  
+            <th>prevClosePrice</th>  
+            <th>lastPrice</th>    
+            <th>lastQty</th>  
+            <th>bidPrice</th>  
+            <th>bidQty</th>  
+            <th>askPrice</th>
+            <th>askQty</th>
+        </tr>  
+    </thead>  
+      <tbody>  
+      <% for(var i=0; i < data.length; i++) { %>
+        <tr>  
+            <td><%= i %></td>  
+            <td><%= data[i].priceChange %></td>
+            <td><%= data[i].priceChangePercent %></td>
+            <td><%= data[i].weightedAvgPrice %></td>
+            <td><%= data[i].prevClosePrice %></td>
+            <td><%= data[i].lastPrice %></td>
+            <td><%= data[i].lastQty %></td>
+            <td><%= data[i].bidPrice %></td>
+            <td><%= data[i].bidQty %></td>
+            <td><%= data[i].askPrice %></td>
+            <td><%= data[i].askQty %></td>
+        </tr>  
+      <% } %>
+      </tbody>
+  </table>

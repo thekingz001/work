@@ -1,0 +1,33 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center">
+      <h1><i class="fab fa-node-js fa-3x"></i></h1>
+      <p>Joint Table Page</p>
+    </div>
+  </div>
+</div>
+
+<table id="table" border="1" class="table text-center">  
+  <thead>  
+      <tr>  
+          <th>ID</th>  
+          <th>ชื่อภาษาไทย</th>  
+          <th>ชื่อภาษาอังกฤษ</th>  
+          <th>ภาค</th> 
+          <th>เวลาสร้าง</th> 
+          <th>เวลาอัพเดด</th> 
+      </tr>  
+  </thead>  
+   <tbody>  
+   <% for(var i=0; i < data.length; i++) { %>
+      <tr>  
+          <td><%= data[i].id %></td>  
+          <td><%= data[i].name_th %></td>  
+          <td><%= data[i].name_en %></td>  
+          <td><%= data[i].geography_id %></td>  
+          <td><%= data[i].created_at %></td>  
+          <td><%= data[i].updated_at %></td>
+      </tr>  
+   <% } %>
+   </tbody>
+</table>

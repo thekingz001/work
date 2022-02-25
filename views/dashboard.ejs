@@ -1,0 +1,56 @@
+<h1 class="mt-4">Dashboard</h1>
+<p class="lead mb-3">Welcome : <%= name %> </p>
+<p class="lead mb-3">Username is : <%= user %> </p>
+<a href="/users/logout" class="btn btn-secondary">Logout</a>
+
+<br>
+
+<% for (var i = 0; i < data.length; i++) { %>
+    <div class="col-md-4 col-sm-4 fh5co-item-wrap">
+      <a href='data/<%=data[i].name%>' rel="modal:open" class="fh5co-listing-item">
+        <img src="images/img-1.jpg" class="img-responsive">
+        <div class="fh5co-listing-copy">
+          <h2><%= data[i].name %></h2>
+          <pre class="json-data"><%= JSON.stringify(data[i]) %></pre>
+        </div>
+      </a>
+    </div>
+  <% } %>
+
+  <br>
+
+  <div class="form-group c">
+    <label for="Station_Type">Station Type</label>
+    <select id="Station_Type" name="Station_Type" class="form-control" placeholder="Station_Type" required>
+    <!-- for loop code start -->
+        <% for(var i=0; i < data.length; i++) { %>
+        <option value="<%= data[i].id %>"><%= data[i].name %></option>
+        <% } %>
+    <!-- for loop code end -->
+    </select>
+  </div>
+
+  <br>
+
+  <table id="table" border="1" class="table">  
+    <thead>  
+        <tr>  
+            <th>ID</th>  
+            <th>Name</th>  
+        </tr>  
+    </thead>  
+     <tbody>  
+     <% for(var i=0; i < data.length; i++) { %>
+        <tr>  
+            <td><%= data[i].id %></td>  
+            <td><%= data[i].name %></td>
+        </tr>  
+     <% } %>
+     </tbody>
+</table>
+
+<br>
+
+
+
+
