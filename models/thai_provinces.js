@@ -20,15 +20,15 @@ module.exports= db.sequelize.define(
             type:Sequelize.INTEGER,
             // notnull:true
         },
-        created_at:{
+        createdAt:{
             type:Sequelize.DATE,
             // notnull:true
         },
-        updated_at:{
+        updatedAt:{
             type:Sequelize.DATE,
             // notnull:true
         },
-        deleted_at:{
+        deletedAt:{
             type:Sequelize.DATE,
             // notnull:true
         }
@@ -37,4 +37,5 @@ module.exports= db.sequelize.define(
         timestamps:false,
         freezeTableName:true
     }
+
 )

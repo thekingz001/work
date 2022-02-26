@@ -35,6 +35,11 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Associatetion
+const thai_provinces = require("./models/thai_provinces");
+const thai_geographies = require("./models/thai_geographies");
+
+thai_provinces.hasMany(thai_geographies);
 
 
 // Connect flash
