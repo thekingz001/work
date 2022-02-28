@@ -10,9 +10,28 @@
       href="https://bootswatch.com/4/journal/bootstrap.min.css"
     />
     <title>Test Page</title>
+    <style type="text/css">
+      #map {
+        height: 1080px;
+        width: 100%;
+      }
+      #result {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        height: 80%;
+        margin: auto;
+        border: 4px solid #dddddd;
+        background: #ffffff;
+        overflow: auto;
+        z-index: 2;
+      }
+    </style>
   </head>
-  <body>
-    <div><%- body %></div>
+  <body onload="init();">
+    <div class="container-fluid"><%- body %></div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -28,7 +47,5 @@
       integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
       crossorigin="anonymous"
     ></script>
-
-    <script src="https://api.longdo.com/map/?key=b864325f9aa7e61adad0b649a726210a"></script>
   </body>
 </html>
